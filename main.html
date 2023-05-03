@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+    //template literal
+const str = `Hello I'm ${6 + 5}
+string`;
+
+//rest/spread operator ...
+    function sum(...c){
+        const total = c.reduce((accum, item, index, c)=>{
+            // console.log(accum);
+            return accum + item;
+        },0)
+        console.log(total);
+        return total
+    }
+
+   let s = sum(4,5,6,7,8,22,69)
+    // console.log(s);
+
+    // Tnayin 1
+const products = [
+    {title: 'Product 1', price: 200},
+    {title: 'Product 2', price: 100},
+    {title: 'Product 3', price: 300},
+    {title: 'Product 4', price: 222},
+];
+
+
+    let user = {
+        name: 'John',
+        age: 28
+    }
+
+    let info = {
+        address: 'Yerevan',
+        name: 'Some'
+    }
+
+    let person = {
+        ...user,
+        ...info
+    }
+
+    console.log(person);
+
+    let person2 = Object.assign({},user,info);
+
+    console.log(person2, 'person2');
+    console.log(user, "user");
+
+//Tnain2
+    // Վերցնենք 2 զանգված(ոչ օբյեկտ), spread -ով միավորենք
+
+    console.log(Math.min(...[1, 5, 66, 25, 25, 21, 22]));
+    Math.max(1,5,66,25,25,21,22)
+
+    const aw = [...'asasasas'];
+
+    //Tnain3
+    //Ինքնուրույն ուսումնասիրել set, map, weakset, weakmap
+
+
+    let arr = [4,5,6]
+
+    // let a = arr[0],b=arr[1],c=arr[2];
+    let [a1,b1,c1,d1] = arr;
+    let [b,a,c,d] = [4,5,6]
+
+    // let name = user.name;
+    // let age = user.age;
+
+    // let {age,name, title} = user;
+    let {name} = user;
+
+    let polygon={
+        width:150,
+        height:200,
+        type: 'polygon'
+    }
+
+    // function getArea({width, height}){
+    //     return width*height;
+    // }
+
+    const getArea = ({width, height})=>width*height;
+
+    console.log(getArea(polygon));
+
+
+
+</script>
+
+</body>
+</html>

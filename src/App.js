@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import User from './User'
+import Counter from "./Counter";
+import Product from "./homework-6/Product";
 
 function Greeting(props){
-  return (<div className="main">
+
+  return (
+      <div className="main">
     <h3>Hello, I'm student</h3>
-  </div>);
+  </div>
+  );
 }
 
 function App() {
@@ -13,23 +16,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <User name='John' />
-      <User name='Davit' age={25}/>
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <Greeting />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <p><Product name="banana " price="2$ "/></p>
+          <p><Product name="banana " price="3$ "/></p>
+          <Counter defaultValue={20}/>
+          <Greeting />
           <Greeting/>
 
-        </a>
       </header>
     </div>
   );
